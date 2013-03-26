@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{1791744A-48B6-6AB4-E9EA-713F3FDBE5E1}</ProjectGuid>
+	<ProjectGuid>{95075371-0ACE-848E-DD58-FC23B70A2E82}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -137,7 +137,6 @@
      <Compile Include="Assets\AstarPathfindingProject\Utilities\SizeProfiler.cs" />
      <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\AstarPathfindingProject\changelog.cs" />
-     <Compile Include="Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\HoangScript\ClientControl.cs" />
      <Compile Include="Assets\HoangScript\GameMenu.cs" />
      <Compile Include="Assets\HoangScript\PathFindingController.cs" />
@@ -239,7 +238,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{E0862866-A4DD-F668-EABF-B0069BD4BF61}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+      <Project>{051C9BDD-F582-8AD1-05B2-C2A008D24876}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

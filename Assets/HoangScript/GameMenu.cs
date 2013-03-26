@@ -6,7 +6,7 @@ public class GameMenu : MonoBehaviour {
 	int portip = 9192;
 	string ip = "127.0.0.1";
 	public GameObject mainCam;
-	
+	int playerCount = 1;
 	// Use this for initialization
 	void Start () {
 	
@@ -44,4 +44,20 @@ public class GameMenu : MonoBehaviour {
 			}
 		}
 	}
+	
+	public void OnPlayerConnected(NetworkPlayer player)
+	{
+		GUI.Label(new Rect(10,Screen.height - 50,500,30),"Viewer " + playerCount++ + " connected from " + player.ipAddress + ":" + player.port);
+	}
+	
+	void OnDisconnectedFromServer(NetworkDisconnection info) {
+		playerCount--;
+        if (Network.isServer)
+			GUI.Label(new Rect(10,Screen.height - 50,500,30),"Local server connection disconnected");
+        else
+            if (info == NetworkDisconnection.LostConnection)
+                GUI.Label(new Rect(10,Screen.height - 50,500,30),"Lost connection to the server");
+            else
+				GUI.Label(new Rect(10,Screen.height - 50,500,30),"Successfully diconnected from the server");
+    }
 }

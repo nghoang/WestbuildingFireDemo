@@ -10,11 +10,14 @@ public class PathFindingController : MonoBehaviour {
 	bool IsShowWindownNotFound = false;
 	ServerControls serverControl;
 	GameObject SinglePathReander;
+	LineRenderer lr;
 	// Use this for initialization
 	void Start () {
 		serverControl = GetComponent<ServerControls>();
 		sk = GetComponent<Seeker>();
 		SinglePathReander = new GameObject("LineRenderer_Single", typeof(LineRenderer));
+		lr = SinglePathReander.GetComponent<LineRenderer>();
+		lr.SetWidth(0.1f, 0.1f);
 	}
 	
 	// Update is called once per frame
@@ -34,16 +37,25 @@ public class PathFindingController : MonoBehaviour {
 		}
 		else
 		{
-			LineRenderer lr = SinglePathReander.GetComponent<LineRenderer>();
-			lr.SetVertexCount(p.vectorPath.Count);
-			lr.SetWidth(0.1f, 0.1f);
+			networkView.RPC("SetPathLength",RPCMode.All,p.vectorPath.Count);
 			for (int i=0;i<p.vectorPath.Count;i++)
 			{
 				Vector3 pv = new Vector3(p.vectorPath[i].x,p.vectorPath[i].y+0.5F,p.vectorPath[i].z);
-				lr.SetPosition(i, pv);
+				networkView.RPC("SetPath",RPCMode.All,i,pv);
 			}
 		}
-		
+	}
+	
+	[RPC]
+	public void SetPath(int i,Vector3 pv)
+	{
+		lr.SetPosition(i, pv);
+	}
+	
+	[RPC]
+	public void SetPathLength(int l)
+	{	
+		lr.SetVertexCount(l);
 	}
 	
 	void OnGUI()

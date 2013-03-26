@@ -1,0 +1,53 @@
+Initialize engine version: 4.0.1f2
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [nvd3dum.dll 9.18.13.1070]
+    Renderer: NVIDIA GeForce GTX 550 Ti
+    Vendor:   NVIDIA
+    VRAM:     977 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 DF24=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Ionic.Zip.Reduced.dll (this message is harmless)
+Loading C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Ionic.Zip.Reduced.dll into Unity Child Domain
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\JsonFx.Json.dll (this message is harmless)
+Loading C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\JsonFx.Json.dll into Unity Child Domain
+- Completed reload, in  0.044 seconds
+desktop: 1680x1050 59Hz; virtual: 1680x1050 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\Boo.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\HoangWin7\Documents\GitHub\WestbuildingFireDemo\test_Data\Managed\System.Core.dll (this message is harmless)
+1 small areas were detected (fewer than 10 nodes),these might have the same IDs as other areas, but it shouldn't affect pathfinding in any significant way (you might get All Nodes Searched as a reason for path failure).
+Which areas are defined as 'small' is controlled by the 'Min Area Size' variable, it can be changed in the A* inspector-->Settings-->Min Area Size
+The small areas will use the area id 254
+ 
+(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Scanning - Process took 1051 ms to complete 
+ 
+(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Selected Point:(-12.9, 0.0, -2.8)
+ 
+(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Selected Point:(-14.0, 0.0, -3.0)
+ 
+(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
+Destroying...
+ 
+(Filename: C:/BuildAgent/work/812c4f5049264fad/Runtime/ExportGenerated/StandalonePlayer/UnityEngineDebug.cpp Line: 43)
+
