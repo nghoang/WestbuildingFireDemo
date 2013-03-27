@@ -32,7 +32,7 @@ private var totalRun : float  = 1.0;
 
 function Update () {
 
-	if (Input.GetKey (KeyCode.Mouse1)){ 
+	if (Input.GetKey (KeyCode.Mouse2)){ 
 	    lastMouse = Input.mousePosition - lastMouse ; 
 	
 	    lastMouse = Vector3(-lastMouse.y * camSens, lastMouse.x * camSens, 0 ); 

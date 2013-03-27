@@ -34,6 +34,7 @@ public class ClientControl : MonoBehaviour {
 			mainChar.GetComponent<ThirdPersonCamera>().cameraTransform = mainCam.transform;
 			networkView.RPC("SpawnChar",RPCMode.Others,
 				myid);
+			mainChar.GetComponent<ThirdPersonCamera>().distance = 1;
 		}
 	}
 	
