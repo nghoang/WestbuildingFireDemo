@@ -116,7 +116,7 @@ private function GetBaseInput() : Vector3 { //returns the basic values, if it's 
 
     var p_Velocity : Vector3;
 
-    if (Input.GetKey (KeyCode.W)){
+    /*if (Input.GetKey (KeyCode.W)){
 
         p_Velocity += Vector3(0, 0 , 1);
 
@@ -126,6 +126,11 @@ private function GetBaseInput() : Vector3 { //returns the basic values, if it's 
 
         p_Velocity += Vector3(0, 0 , -1);
 
+    }*/
+    
+    if (Input.GetAxis ("Mouse ScrollWheel"))
+    {
+    	p_Velocity += Vector3(0, 0 , Input.GetAxis ("Mouse ScrollWheel")*30);
     }
 
     if (Input.GetKey (KeyCode.A)){
@@ -141,13 +146,13 @@ private function GetBaseInput() : Vector3 { //returns the basic values, if it's 
     }
     
 
-    if (Input.GetKey (KeyCode.Q)){
+    if (Input.GetKey (KeyCode.W)){
 
         p_Velocity += Vector3(0, 1 , 0);
 
     }
 
-    if (Input.GetKey (KeyCode.E)){
+    if (Input.GetKey (KeyCode.S)){
 
         p_Velocity += Vector3(0, -1 , 0);
 

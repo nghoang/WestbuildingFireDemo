@@ -7,9 +7,11 @@ public class ClientControl : MonoBehaviour {
 	public GameObject mainCharPref;
 	public GameObject mainCam;
 	GameObject mainChar;
+	LogPanel guilog;
 	string myid;
 	// Use this for initialization
 	void Start () {
+		guilog = GetComponent<LogPanel>();
 		myid = System.Guid.NewGuid().ToString ();
 	}
 	
@@ -30,11 +32,15 @@ public class ClientControl : MonoBehaviour {
 		{
 			mainChar = (GameObject)Instantiate(mainCharPref);
 			mainChar.name = myid;
-			mainChar.transform.position = new Vector3(-15.88798F,1.013724F,-3.551169F);
-			mainChar.GetComponent<ThirdPersonCamera>().cameraTransform = mainCam.transform;
+			mainChar.transform.position = mainCam.transform.position;
+			Destroy(mainChar.GetComponent<ThirdPersonController>());
+			Destroy(mainChar.GetComponent<ThirdPersonCamera>());
+			mainChar.AddComponent<FPSInputController>();
+			mainChar.AddComponent<MouseLook>();
+			mainChar.transform.rotation = mainCam.transform.rotation;
+			mainCam.transform.parent = mainChar.transform;
 			networkView.RPC("SpawnChar",RPCMode.Others,
 				myid);
-			mainChar.GetComponent<ThirdPersonCamera>().distance = 1;
 		}
 	}
 	
@@ -53,12 +59,25 @@ public class ClientControl : MonoBehaviour {
 	{
 		Debug.Log("Moving: " + id);
 		GameObject c = GameObject.Find(id);
-		c.transform.position = newPos;
-		c.transform.rotation = newRo;
+		if (c == null)
+		{
+			c = (GameObject)Instantiate(mainCharPref);
+			c.name = id;
+			c.transform.position = newPos;
+			Destroy(c.GetComponent<ThirdPersonController>());
+			Destroy(c.GetComponent<ThirdPersonCamera>());
+			c.transform.rotation = newRo;
+		}
+		else
+		{
+			c.transform.position = newPos;
+			c.transform.rotation = newRo;
+		}
 	}
 	
 	public void OnConnectedToServer() {
         Debug.Log("Connected to server");
+		guilog.AddBLog("Player "+myid+" joined the network");
 		AddCharacter();
     }
 }

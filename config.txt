@@ -1,0 +1,4 @@
+moving_by_keyboard=1
+viewing_by_mouse=1
+enable_trackir=0
+enable_kinect=0

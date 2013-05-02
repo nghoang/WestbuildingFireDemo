@@ -11,6 +11,8 @@ public class PathFindingController : MonoBehaviour {
 	ServerControls serverControl;
 	GameObject SinglePathReander;
 	LineRenderer lr;
+	Path oldPath;
+	
 	// Use this for initialization
 	void Start () {
 		serverControl = GetComponent<ServerControls>();
@@ -18,6 +20,14 @@ public class PathFindingController : MonoBehaviour {
 		SinglePathReander = new GameObject("LineRenderer_Single", typeof(LineRenderer));
 		lr = SinglePathReander.GetComponent<LineRenderer>();
 		lr.SetWidth(0.1f, 0.1f);
+	}
+	
+	public void Rescan()
+	{
+		if (path != null)
+		{
+			path.Scan();
+		}
 	}
 	
 	// Update is called once per frame
@@ -37,6 +47,7 @@ public class PathFindingController : MonoBehaviour {
 		}
 		else
 		{
+			oldPath = p;
 			networkView.RPC("SetPathLength",RPCMode.All,p.vectorPath.Count);
 			for (int i=0;i<p.vectorPath.Count;i++)
 			{

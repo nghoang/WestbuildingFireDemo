@@ -1,13 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HoangScript\ClientControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\HoangScript\ServerControls.cs">
     <Files>
-      <File FileName="Assets\HoangScript\GameMenu.cs" Line="62" Column="6" />
-      <File FileName="Assets\HoangScript\ClientControl.cs" Line="42" Column="3" />
+      <File FileName="Assets\HoangScript\AppConst.cs" Line="10" Column="17" />
+      <File FileName="Assets\HoangScript\AddFire.cs" Line="25" Column="21" />
+      <File FileName="Assets\HoangScript\PathFindingController.cs" Line="39" Column="4" />
+      <File FileName="Assets\HoangScript\ClientControl.cs" Line="49" Column="3" />
+      <File FileName="Assets\HoangScript\GameMenu.cs" Line="32" Column="1" />
+      <File FileName="Assets\HoangScript\ServerControls.cs" Line="57" Column="24" />
       <File FileName="Assets\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" Line="1" Column="1" />
-      <File FileName="Assets\HoangScript\ServerControls.cs" Line="1" Column="1" />
-      <File FileName="Assets\HoangScript\PathFindingController.cs" Line="42" Column="5" />
+      <File FileName="Assets\Standard Assets\FlyCam.js" Line="1" Column="1" />
+      <File FileName="Assets\HoangScript\LogPanel.cs" Line="28" Column="30" />
     </Files>
+    <Pads>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

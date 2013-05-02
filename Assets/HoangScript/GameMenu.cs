@@ -7,9 +7,10 @@ public class GameMenu : MonoBehaviour {
 	string ip = "127.0.0.1";
 	public GameObject mainCam;
 	int playerCount = 1;
+	LogPanel guilog;
 	// Use this for initialization
 	void Start () {
-	
+		guilog = GetComponent<LogPanel>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +28,7 @@ public class GameMenu : MonoBehaviour {
 			portip = int.Parse(GUI.TextField(new Rect(Screen.width/2 - 30,Screen.height/2,100,23),portip.ToString()));
 			if (GUI.Button(new Rect(Screen.width/2 + 100,Screen.height/2,100,23),"Create Host"))
 			{
+				guilog.AddLLog("Server starts up");
 				Network.InitializeServer (10,portip);
 				mainCam.AddComponent<FlyCam>();
 			}
@@ -47,6 +49,7 @@ public class GameMenu : MonoBehaviour {
 	
 	public void OnPlayerConnected(NetworkPlayer player)
 	{
+		
 		GUI.Label(new Rect(10,Screen.height - 50,500,30),"Viewer " + playerCount++ + " connected from " + player.ipAddress + ":" + player.port);
 	}
 	
